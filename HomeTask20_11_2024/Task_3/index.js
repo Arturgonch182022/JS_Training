@@ -18,3 +18,7 @@ const obj = {
 };
 const getName = obj.getName.bind(obj);
 console.log(getName());
+//3) можно тут использовать для решения call?
+//да ещё можно и с apply
+console.log(obj.getName.call(obj));
+console.log(obj.getName.apply(obj));

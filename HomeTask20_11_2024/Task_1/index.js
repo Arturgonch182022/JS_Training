@@ -9,3 +9,7 @@ function sum(){
 }
 
 console.log(sum(1,2,3));
+//1) предлагаю тут еще попробовать решить задачу используя оператор spred и reduce
+function sumSpredReduce(...args){
+    return args.reduce((acc, cur) => acc + cur, 0);
+}
