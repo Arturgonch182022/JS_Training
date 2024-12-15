@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить параграф</title>
+    <style>
+        #container {
+          border: 1px solid #ccc; /* Граница вокруг контейнера */
+          padding: 10px; /* Отступ внутри контейнера */
+          margin-bottom: 10px; /* Отступ снизу */
+          min-height: 100px; /* Минимальная высота контейнера */
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="addButton">Добавить параграф</button>
+    <script>
+    const addButton = document.getElementById("addButton");
+    const container = document.getElementById("container");
+
+    addButton.addEventListener('click',function (){
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = "Новый параграф";
+      container.appendChild(newParagraph);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма с выводом в консоль</title>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="text" id="textInput" placeholder="Введите текст"/>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const inputText = document.getElementById('textInput').value;
+        console.log(inputText);
+    });
+</script>
+
+</body>
+</html>

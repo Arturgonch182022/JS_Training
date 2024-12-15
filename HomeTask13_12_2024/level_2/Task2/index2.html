@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счетчик кликов</title>
+    <style>
+        #counter {
+            font-size: 20px; /* Размер текста счетчика */
+            margin-top: 10px; /* Отступ сверху */
+        }
+    </style>
+</head>
+<body>
+
+<button id="clickButton">Нажми меня</button>
+<div id="counter">Количество кликов: 0</div>
+
+<script>
+    let clickCount = 0;
+
+    const clickButton = document.getElementById('clickButton');
+    const counter = document.getElementById('counter');
+
+    clickButton.addEventListener('click', function () {
+        clickCount++;
+        counter.textContent = `Количество кликов: ${clickCount}`;
+    });
+</script>
+
+</body>
+</html>

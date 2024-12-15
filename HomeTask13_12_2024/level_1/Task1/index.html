@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скрыть коробку</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white; /* Цвет текста */
+            display: flex; /* Центрирование текста */
+            justify-content: center; /* Центрирование текста */
+            align-items: center; /* Центрирование текста */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">Это коробка</div>
+<button id="hideButton">Скрыть коробку</button>
+
+<script>
+    const hideButton = document.getElementById('hideButton');
+    const box = document.getElementById('box');
+
+    hideButton.addEventListener('click', function() {
+        box.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
