@@ -8,3 +8,12 @@
 // Пример HTML:
 // <button id="clickButton">Нажми меня</button>
 // <div id="counter">Количество кликов: 0</div>
+let clickCount = 0;
+
+const clickButton = document.getElementById('clickButton');
+const counter = document.getElementById('counter');
+
+clickButton.addEventListener('click', function () {
+    clickCount++;
+    counter.textContent = `Количество кликов: ${clickCount}`;
+});

@@ -12,3 +12,11 @@
 // и добавьте его в контейнер с помощью appendChild().
 // Ожидаемый результат: При каждом нажатии на кнопку
 // в контейнер будет добавляться новый параграф с текстом "Новый параграф".
+const addButton = document.getElementById("addButton");
+const container = document.getElementById("container");
+
+addButton.addEventListener('click',function (){
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = "Новый параграф";
+    container.appendChild(newParagraph);
+});

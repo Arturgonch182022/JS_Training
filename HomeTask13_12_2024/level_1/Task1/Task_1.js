@@ -9,3 +9,9 @@
 // При нажатии на кнопку элемент box должен исчезать (не отображаться на странице).
 // Используйте JavaScript для изменения стиля элемента, чтобы скрыть его (например, display: none).
 // Ожидаемый результат: После нажатия на кнопку элемент box исчезает с экрана.
+const hideButton = document.getElementById('hideButton');
+const box = document.getElementById('box');
+
+hideButton.addEventListener('click', function() {
+    box.style.display = 'none';
+});

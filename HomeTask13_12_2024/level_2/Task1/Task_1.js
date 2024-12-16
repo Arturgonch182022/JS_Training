@@ -12,3 +12,11 @@
 //     <input type="text" id="textInput" placeholder="Введите текст" />
 //     <button type="submit">Отправить</button>
 // </form>
+const form = document.getElementById('myForm');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const inputText = document.getElementById('textInput').value;
+    console.log(inputText);
+});
