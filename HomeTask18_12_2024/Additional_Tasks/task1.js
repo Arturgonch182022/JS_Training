@@ -17,9 +17,7 @@
 //   nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 // }
 async function fetchWithRetry(url, retries) {
-    let attempts = 0;
-
-    while (attempts <= retries) {
+    while (retries >= 0) {
         try {
             const response = await fetch(url);
             if (response.ok) {
@@ -27,11 +25,11 @@ async function fetchWithRetry(url, retries) {
             }
             throw new Error(`HTTP error! status: ${response.status}`);
         } catch (error) {
-            attempts++;
-            if (attempts > retries) {
-                throw new Error(`Failed to fetch after ${retries + 1} attempts: ${error.message}`);
+            if (retries === 0) {
+                throw new Error(`Failed to fetch after all attempts: ${error.message}`);
             }
-            console.log(`Attempt ${attempts} failed. Retrying...`);
+            console.log(`Attempt failed. ${retries} retries left. Retrying...`);
+            retries--;
         }
     }
 }
